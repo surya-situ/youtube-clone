@@ -11,7 +11,7 @@ const chatSlice = createSlice( {
             //removing messages so that out system will not get hang.
             state.messages.splice(LIVE_CHAT_COUNT, 1)
             //displaying all the messages:
-            state.messages.unshift(action.payload)
+            state.messages.push(action.payload)
         }
     }
 })
