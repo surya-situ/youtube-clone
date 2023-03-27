@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 import Demo from "./components/Demo";
+import DemoNew from "./components/DemoNew";
 
 const appRouter = createBrowserRouter([{
   path: "/",
@@ -22,8 +23,14 @@ const appRouter = createBrowserRouter([{
     },
     {
       path:'demo',
-      element:<Demo/>
+      element: (
+        <>
+          <Demo />
+          <DemoNew />
+        </>
+      )
     }
+
   ]
 }])
 
